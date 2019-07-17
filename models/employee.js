@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { FILE } from 'dns';
 
 const Schema = mongoose.Schema;
 
@@ -15,7 +16,7 @@ let Emp = new Schema({
     },
     dob:{
         type: Date,
-        default: Date.now
+        //default: Date.now
     },
     gender:{
         type:String
@@ -24,11 +25,12 @@ let Emp = new Schema({
         type:Number
     },
     skills: {
-        type:Array
+        type:Array,
+        default:['None']
     },
     photo: {
         type: String,
-        default:"https://picsum.photos/id/231/200/300"
+        default: 'https://picsum.photos/id/1005/5760/3840'
     }
 
 });
